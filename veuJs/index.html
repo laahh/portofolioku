@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Js</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="app" class="container mx-auto">
+    <div>
+      <h1 class="mb-4 mt-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Dasar Vue Js</span>
+      </h1>
+    </div>
+    
+    <div class="mt-10">
+      <h1 class="mb-3">Contoh Counter pada vue js</h1>
+      <button
+      @click="kurang()"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+      -
+    </button>
+    {{ count }}
+    <button
+    @click="tambah()"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+    >
+    +
+  </button>
+</div>
+
+<!-- directives v-text -->
+
+<div class="mt-10">
+  <h1>Contoh inplementasi directive v-text</h1>
+  <h1>contoh :</h1>
+  <div v-text="message"></div>
+</div>
+
+<!-- directive v-html -->
+<!-- diect v-html adalah menggunakan tag html di vue  -->
+<div class="mt-10">
+  <h1>Contoh inplementasi directive v-html</h1>
+  <h1>contoh :</h1>
+  <h1 v-html="message2"></h1>
+</div>
+
+<!-- cara penggunaan if else di vue js -->
+<div class="mt-10">
+  <h1>Contoh Implementasi If Else Pada Vue Js</h1>
+  <div v-if="count >= 10">predikat adalah Sangat Baik</div>
+  <div v-else-if="count >= 8 && count < 10">predikat adalah Baik</div>
+  <div v-else>predikat adalah Cukup</div>
+</div>
+
+
+<!-- menggunakan v-show pada vue js -->
+<div class="mt-10">
+  <h1>Contoh Implementasi v-show</h1>
+  <button @click="lampu()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Lampu On Off</button>
+  <h1 v-show="lampuState">Lampu Hidup</h1>
+</div>
+
+<!-- for di vue js -->
+<div class="mt-10">
+  <h1>Contoh Implementasi For</h1>
+  <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+    <li  v-for="(i,index) in fruits" class="flex items-center">
+      <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+      </svg>
+      {{ i }} <button @click="hapus()" class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Hapus </spa>
+        
+        
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+  <div class="mt-10">
+    <h1>Contoh Implementasi v-binding </h1>
+    <a v-bind:href="url">google</a>
+    
+    <div class="mt-10">
+      
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img class="rounded-t-lg" v-bind:src="person.image" alt="" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ person.name }}</h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+          <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+  
+  <div class="mt-10">
+    <h1>Contoh Implementasi v-model</h1>
+    <h1>V-model digunakan untuk membinding data yang di inputkan oleh user / form</h1>
+    <div class="mb-6 mt-10">
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+      <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required v-model="email">
+    </div>
+    <div>
+      <input type="radio" value="pria" v-model="gender">pria
+      <input type="radio" value="wanita" v-model="gender">wanita
+    </div>
+    <div>
+      <h1>Email User {{ email }} </h1>
+      <h1>Gender User {{ gender }} </h1>
+    </div>
+  </div>
+  
+  <div class="mt-20 mb-20">
+    <h1>Contoh Implementasi computed pada vue js</h1>
+    
+    <form class="mt-10 mx-20">
+      <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+          <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required v-model="first_name">
+        </div>
+        <div>
+          <label for="midle_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Midle name</label>
+          <input type="text" id="midle_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required v-model="midle_name">
+        </div>
+        <div>
+          <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+          <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required v-model="last_name">
+        </div>
+        
+        
+      </form>
+      <h1 class="mt-8">Full Name  : {{ fullName }}</h1>
+      
+      
+    </div>
+    
+    <div class="mx-10 mt-20">
+      <h1 class="mt-20">Contoh Implementasi watcher</h1>
+      
+      <form class="w-1/2 ">
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+          <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required v-model="userName">
+          <div v-if="userNameError" id="alert-2" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Info</span>
+            <div class="ml-3 text-sm font-medium">
+              A simple info alert with an <a href="#" class="font-semibold underline hover:no-underline">example link</a>. Give it a click if you like.
+            </div>
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-2" aria-label="Close">
+              <span class="sr-only">Close</span>
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+            </button>
+          </div>
+          
+          
+          
+          
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+          <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required v-model="password">
+          <div v-if="passwordError" id="alert-2" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Info</span>
+            <div class="ml-3 text-sm font-medium">
+              Password harus berisi <a href="#" class="font-semibold underline hover:no-underline">8 lebih</a> Karakter
+            </div>
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-2" aria-label="Close">
+              <span class="sr-only">Close</span>
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+          <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required v-model="rePasword">
+          <div v-if="repasswordError"  id="alert-2" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Info</span>
+            <div class="ml-3 text-sm font-medium">
+              Password yang di inputkan  <a href="#" class="font-semibold underline hover:no-underline">belum sesuai dengan password yang </a>. di atas
+            </div>
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-2" aria-label="Close">
+              <span class="sr-only">Close</span>
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
+            <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required v-model="password">
+          </div>
+          <label for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+        </div>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+      </form>
+      
+    </div>
+    
+    
+  </div>
+  
+  <script type="module">
+    import { createApp, ref } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+    
+    createApp({
+      data() {
+        return {
+          count: 6,
+          message: "directive v-text",
+          message2: "<strong>directive v-html</strong>",
+          lampuState: true,
+          fruits: ["apple", "jeruk", "anggur", "pisang", "melon", "mangga"],
+          url: "https://www.google.com/",
+          person : {
+            name: "John Doe",
+            age: 30,
+            image :"https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZG9jdG9yfGVufDB8fDB8fHww"
+          },
+          email :"",
+          gender:"",
+          first_name:"",
+          midle_name: "",
+          last_name:"",
+          userName : "",
+          password :"" ,
+          repassword :"" ,
+          userNameError : false,
+          passwordError : false,
+          repasswordError : false,
+          
+        };
+      },
+      methods: {
+        kurang() {
+          this.count--;
+        },
+        tambah() {
+          this.count++;
+        },
+        lampu() {
+          this.lampuState = !this.lampuState;
+        },
+        
+        hapus(index){
+          this.fruits.splice(index,1);
+        },
+      },
+      computed: {
+        fullName(){
+          return  this.first_name + " " + this.midle_name + " " + this.last_name
+        }
+      },
+      watch :{
+        userName(value){
+          if(value.length < 8){
+            this.userNameError = true;
+          }
+          else{
+            this.userNameError =false;
+          }
+        },
+        password(value){
+          if(value.length < 8){
+            this.passwordError = true;
+          }
+          else{
+            this.passwordError =false;
+          }
+        },
+        repassword(value){
+          if(value > 8){
+            this.repasswordError = true;
+          }
+          else{
+            this.repasswordError =false;
+          }
+        }
+        
+        
+      }
+    }).mount("#app");
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+</body>
+</html>
